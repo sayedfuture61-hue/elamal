@@ -27,13 +27,14 @@
     for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
     ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
     ttq.load=function(e,n){
-      var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;
+      var r="https://analytics.tiktok.com/i18n/pixel/events.js";
       ttq._i=ttq._i||[];ttq._i[e]=[];ttq._i[e]._u=r;
       ttq._t=ttq._t||{};ttq._t[e]=+new Date;
       ttq._o=ttq._o||{};ttq._o[e]=n||{};
       n=document.createElement("script");n.type="text/javascript";n.async=!0;
       n.src=r+"?sdkid="+e+"&lib="+t;
-      e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e);
+      e=document.getElementsByTagName("script")[0];
+      e.parentNode.insertBefore(n,e);
     };
     ttq.load('DBEB51RC77UEENV8B910');
     ttq.page();
@@ -208,7 +209,6 @@
       color: var(--dark);
       font-size: clamp(25px, 4vw, 35px);
       margin: 0 0 10px;
-      line-height: 1.6;
     }
 
     .section-title p {
@@ -253,9 +253,7 @@
       font-size: 14px;
     }
 
-    .about {
-      background: var(--light);
-    }
+    .about { background: var(--light); }
 
     .about-grid {
       display: grid;
@@ -377,31 +375,11 @@
     }
 
     footer {
-      padding: 25px 0 90px;
+      padding: 25px 0;
       background: var(--dark);
       color: #e4ece6;
       text-align: center;
       font-size: 13px;
-    }
-
-    .floating-buttons {
-      position: fixed;
-      bottom: 13px;
-      left: 12px;
-      right: 12px;
-      z-index: 20;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    .floating-buttons .btn {
-      flex: 1;
-      box-shadow: 0 4px 16px rgba(0,0,0,.16);
-      padding: 11px 8px;
-      font-size: 14px;
     }
 
     @media (max-width: 760px) {
@@ -444,11 +422,13 @@
       <div class="container">
         <div class="hero-content">
           <span class="offer-tag">عرض خاص لفترة محدودة</span>
+
           <h1>
             تنظيف وصيانة الأفران بالرياض
             <br>
             مع <span>خصم 30%</span>
           </h1>
+
           <p>
             فرنك يحتاج تنظيف أو صيانة؟ تواصل مع شركة الأمل،
             واستفسر عن خدماتنا وعرض الخصم المتاح، واحجز موعدك بسهولة
@@ -548,10 +528,12 @@
       <div class="container">
         <h2>استفد من عرض شركة الأمل</h2>
         <div class="discount">خصم 30%</div>
+
         <p>
           تواصل معنا الآن لمعرفة تفاصيل العرض والخدمات المشمولة،
           وتأكيد السعر قبل الحجز.
         </p>
+
         <div class="buttons" style="justify-content:center">
           <a class="btn btn-whatsapp"
              href="https://wa.me/966575799170?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%B9%D8%B1%D8%B6%20%D8%AE%D8%B5%D9%85%2030%25%20%D9%84%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%A3%D9%88%20%D8%B5%D9%8A%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D8%A3%D9%81%D8%B1%D8%A7%D9%86%20%D8%A8%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6."
@@ -559,6 +541,7 @@
              onclick="if(window.ttq)ttq.track('Contact')">
             احصل على تفاصيل العرض
           </a>
+
           <a class="btn btn-call" href="tel:+966575799170"
              onclick="if(window.ttq)ttq.track('Contact')">
             اتصل للاستفسار
@@ -613,6 +596,7 @@
              onclick="if(window.ttq)ttq.track('Contact')">
             راسلنا على واتساب
           </a>
+
           <a class="btn btn-call" href="tel:+966575799170"
              onclick="if(window.ttq)ttq.track('Contact')">
             اتصل الآن
@@ -629,20 +613,6 @@
       <div>© <span id="year"></span> جميع الحقوق محفوظة</div>
     </div>
   </footer>
-
-  <div class="floating-buttons">
-    <a class="btn btn-whatsapp"
-       href="https://wa.me/966575799170?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%A3%D9%88%20%D8%B5%D9%8A%D8%A7%D9%86%D8%A9%20%D8%A7%D9%84%D9%81%D8%B1%D9%86%20%D8%A8%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6."
-       target="_blank" rel="noopener"
-       onclick="if(window.ttq)ttq.track('Contact')">
-      واتساب
-    </a>
-
-    <a class="btn btn-call" href="tel:+966575799170"
-       onclick="if(window.ttq)ttq.track('Contact')">
-      اتصال مباشر
-    </a>
-  </div>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
